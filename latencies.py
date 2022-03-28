@@ -14,6 +14,7 @@ def main():
     print(f'mean was {stats.mean(times)}')
     print(f'median was {stats.median(times)}')
     plt.hist(times, bins=2**16, cumulative=True, histtype='step', density=True)
+    plt.title(sys.argv[1])
     plt.show()
 
 
