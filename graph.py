@@ -12,7 +12,8 @@ if __name__ == '__main__':
         sl = [results[s][0] for s in skews]
         at = [results[s][1] for s in skews]
         nl = [results[s][2] for s in skews]
-        plt.plot(skews, sl)
-        plt.plot(skews, at)
-        plt.plot(skews, nl)
+        print(skews, sl, at, nl)
+        plt.plot(skews, sl, 'ro')
+        plt.plot(skews, at, 'go')
+        plt.plot(skews, nl, 'bo')
         plt.show()
