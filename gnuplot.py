@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+import enum
 import sys
 
 if __name__ == '__main__':
@@ -12,8 +12,6 @@ if __name__ == '__main__':
         sl = [results[s][0] for s in skews]
         at = [results[s][1] for s in skews]
         nl = [results[s][2] for s in skews]
-        print(skews, sl, at, nl)
-        plt.plot(skews, sl, 'ro')
-        plt.plot(skews, at, 'go')
-        plt.plot(skews, nl, 'bo')
-        plt.show()
+        print('Skew, Spinlock, Fetch-and-add, Unsynchronized')
+        for skew, lock, atomic, null in zip(skews, sl, at, nl):
+            print(f'{skew}, {lock}, {atomic}, {null}')
