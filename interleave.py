@@ -18,7 +18,7 @@ def main():
     for prefix, sources in datasets.items():
         file = open(f'{prefix}.dat', 'w')
         for source in sources:
-            latencies = open(f'{path}{source}', 'r')
+            latencies = open(f'{path}{source}', 'r', encoding='utf-8')
             for line in latencies.readlines():
                 print(line, end='', file=file)
 

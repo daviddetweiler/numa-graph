@@ -18,7 +18,7 @@ def main():
     print(f'median was {stats.median(times)}')
     #plt.xscale('log')
     #plt.yscale('log')
-    plt.xlim(0, 300)
+    #plt.xlim(0, 300)
     plt.hist(times, bins=m, cumulative=True, histtype='step', density=True)
     plt.title(title)
     plt.show()
